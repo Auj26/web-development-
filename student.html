@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        form {
+            background-color: #6c5ce7;
+            color: white;
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            text-decoration: underline;
+        }
+        label {
+            display: block;
+            margin-top: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="number"], select, textarea {
+            width: 50%;
+            padding: 6px;
+            margin-top: 4px;
+            border-radius: 4px;
+            border: none;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .gender, .hobbies, .courses {
+            margin-top: 10px;
+        }
+        .gender input, .hobbies input, .courses input {
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+        table {
+            width: 100%;
+            margin-top: 10px;
+            border-collapse: collapse;
+            background-color: white;
+            color: black;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 6px;
+            text-align: center;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 8px 30px;
+            margin-top: 15px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            background-color: #eff4f3;
+            color: rgb(8, 7, 7);
+        }
+        input[type="reset"] {
+            background-color: #fcf7f7;
+            color: rgb(15, 13, 13);
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h2>STUDENT REGISTRATION FORM</h2>
+
+        <label>First Name</label>
+        <input type="text" name="firstName" maxlength="30"> 
+        (max 30 characters a-z and A-Z)
+
+        <label>Last Name</label>
+        <input type="text" name="lastName" maxlength="30"> 
+        (max 30 characters a-z and A-Z)
+
+        <label>Date of Birth</label>
+        <select name="day">
+            <option value="">Day</option>
+            <option value="1">1</option> <br>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option> <br>
+            </select>
+
+            <!-- Add 1-31 -->
+            
+        </select>
+        <select name="month">
+            <option value="">Month</option>
+            <option value="Jan">Jan</option>
+            <option value="Feb">Feb</option>
+            <option value="Mar">Mar</option>
+            <option value="Apr">Apr</option>
+            <option value="May">May</option>
+            <option value="Jun">Jun</option>
+            <option value="Jul">Jul</option>
+            <option value="Aug">Aug</option>
+            <option value="Sep">Sep</option>
+            <option value="Oct">Oct</option>
+            <option value="Nov">Nov</option>
+            <option value="Dec">Dec</option>
+        </select>
+        <select name="year">
+            <option value="">Year</option>
+            <!-- Add 1990-2026 -->
+            <script>
+                for(let i=1990;i<=2026;i++){document.write(`<option value="${i}">${i}</option>`);}
+            </script>
+        </select>
+
+        <label>Email ID</label>
+        <input type="email" name="email">
+
+        <label>Mobile Number</label>
+        <input type="text" name="mobile" maxlength="10">
+        (10 digit number)
+
+        <div class="gender">
+            Gender:
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+        </div>
+
+        <label>Address</label>
+        <textarea name="address" rows="5"></textarea>
+
+        <label>City</label>
+        <input type="text" name="city" maxlength="30">
+        (max 30 characters a-z and A-Z)
+
+        <label>PIN Code</label>
+        <input type="text" name="pincode" maxlength="6">
+        (6 digit number)
+
+        <label>State</label>
+        <input type="text" name="state" maxlength="30">
+        (max 30 characters a-z and A-Z)
+
+        <label>Country</label>
+        <input type="text" name="country">
+
+        <div class="hobbies">
+            Hobbies:
+            <input type="checkbox" name="hobbies" value="Drawing"> Drawing
+            <input type="checkbox" name="hobbies" value="Singing"> Singing
+            <input type="checkbox" name="hobbies" value="Dancing"> Dancing
+            <input type="checkbox" name="hobbies" value="Sketching"> Sketching 
+            <br>
+
+            Others: <input type="textbox"
+             name="otherHobbies">
+        </div>
+
+        <label>Qualification</label>
+        <table>
+            <tr>
+                <th>Sl. No.</th>
+                <th>Examination</th>
+                <th>Board</th> 
+                <th>Percentage</th>
+                <th>Year of Passing</th>
+            </tr>
+    
+            <tr>
+                <td>1</td>
+                <td>Class X</td>
+                <td><input type="text" name="boardX" maxlength="10"></td>
+                <td><input type="text" name="percentageX" maxlength="5"></td>
+                <td><input type="text" name="yearX" maxlength="4"></td> 
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Class XII</td>
+                <td><input type="text" name="boardXII" maxlength="10"></td>
+                <td><input type="text" name="percentageXII" maxlength="5"></td>
+                <td><input type="text" name="yearXII" maxlength="4"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Graduation</td>
+                <td><input type="text" name="boardGrad" maxlength="10"></td>
+                <td><input type="text" name="percentageGrad" maxlength="5"></td>
+                <td><input type="text" name="yearGrad" maxlength="4"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Masters</td> 
+                <td><input type="text" name="boardMasters" maxlength="10"></td>
+                <td><input type="text" name="percentageMasters" maxlength="5"></td>
+                <td><input type="text" name="yearMasters" maxlength="4"></td>
+            </tr>
+        </table>
+
+        <div class="courses">
+            Courses Applied For:
+            <input type="radio" name="course" value="BCA"> BCA
+            <input type="radio" name="course" value="B.Com"> B.Com
+            <input type="radio" name="course" value="B.Sc"> B.Sc
+            <input type="radio" name="course" value="B.A"> B.A
+        </div>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+</body>
+</html>
+, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
